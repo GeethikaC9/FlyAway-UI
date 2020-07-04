@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Trial3": {
+    "trial3": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,12 +13,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Trial3",
+            "outputPath": "dist/trial3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -41,7 +41,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -63,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Trial3:build"
+            "browserTarget": "trial3:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Trial3:build:production"
+              "browserTarget": "trial3:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Trial3:build"
+            "browserTarget": "trial3:build"
           }
         },
         "test": {
@@ -111,15 +110,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Trial3:serve"
+            "devServerTarget": "trial3:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Trial3:serve:production"
+              "devServerTarget": "trial3:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "Trial3"
+    }
+  },
+  "defaultProject": "trial3",
+  "cli": {
+    "analytics": false
+  }
 }
